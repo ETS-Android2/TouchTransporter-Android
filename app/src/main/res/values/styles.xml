@@ -1,0 +1,21 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="android:windowBackground">@color/cardview_dark_background</item>
+    </style>
+
+    <style name = "NoActionBar" parent = "Theme.AppCompat.DayNight.NoActionBar">
+        <item name = "android:windowActionBar">false</item>
+        <item name = "android:windowNoTitle">true</item>
+        <item name="colorPrimary">@color/icon_bg</item>
+        <item name="colorPrimaryDark">#2FA863</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/cardview_dark_background</item>
+    </style>
+
+</resources>

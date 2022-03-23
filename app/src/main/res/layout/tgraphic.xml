@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:a="http://schemas.android.com/apk/res/android"
+    a:orientation="vertical"
+    a:layout_width="match_parent"
+    a:layout_height="match_parent"
+    a:theme="@style/NoActionBar"
+    a:id="@+id/graph"
+    a:keepScreenOn="true">
+
+    <!--button for tablet-->
+    <ImageButton
+        a:layout_width="48dp"
+        a:layout_height="48dp"
+        a:layout_alignParentBottom="true"
+        a:layout_marginBottom="0dp"
+        a:src="@drawable/back"
+        a:tag="key-1"
+        a:id="@+id/key_1"
+        a:contentDescription="@string/app_name"/>
+
+    <ImageButton
+        a:layout_width="48dp"
+        a:layout_height="48dp"
+        a:layout_alignParentStart="true"
+        a:layout_alignParentBottom="true"
+        a:layout_marginStart="50dp"
+        a:layout_marginBottom="0dp"
+        a:src="@drawable/eraser"
+        a:tag="key-2"
+        a:id="@+id/key_2"
+        a:contentDescription="@string/app_name" />
+
+    <ImageButton
+        a:layout_width="48dp"
+        a:layout_height="48dp"
+        a:layout_alignParentStart="true"
+        a:layout_alignParentBottom="true"
+        a:layout_marginStart="100dp"
+        a:layout_marginBottom="0dp"
+        a:src="@drawable/pencil"
+        a:tag="key-3"
+        a:id="@+id/key_3"
+        a:contentDescription="@string/app_name"/>
+
+    <GridLayout
+        a:layout_width="wrap_content"
+        a:layout_height="wrap_content"
+        a:layout_centerHorizontal="true"
+        a:layout_alignParentBottom="true"
+        a:id="@+id/gr_ib">
+        <Button
+            a:layout_width="48dp"
+            a:layout_height="48dp"
+            a:layout_marginBottom="0dp"
+            a:id="@+id/lclick"
+            a:tag="lcl"
+            a:text="L"
+            a:textColor="#FFFFFF"/>
+
+        <Button
+            a:layout_width="48dp"
+            a:layout_height="48dp"
+            a:layout_marginBottom="0dp"
+            a:id="@+id/rclick"
+            a:text="R"
+            a:tag="rcl"
+            a:textColor="#FFFFFF"/>
+
+    <ImageButton
+        a:layout_width="48dp"
+        a:layout_height="48dp"
+        a:layout_marginStart="20dp"
+        a:layout_marginBottom="0dp"
+        a:src="@drawable/magnifyplus"
+        a:tag="key-4"
+        a:id="@+id/key_4"
+        a:contentDescription="@string/app_name"/>
+
+    <ImageButton
+        a:layout_width="48dp"
+        a:layout_height="48dp"
+        a:layout_marginStart="0dp"
+        a:layout_marginBottom="0dp"
+        a:src="@drawable/magnifyminus"
+        a:tag="key-5"
+        a:id="@+id/key_5"
+        a:contentDescription="@string/app_name"/>
+    </GridLayout>
+
+    <ImageButton
+        a:layout_width="48dp"
+        a:layout_height="48dp"
+        a:layout_alignParentEnd="true"
+        a:layout_alignParentBottom="true"
+        a:layout_marginEnd="100dp"
+        a:layout_marginBottom="0dp"
+        a:src="@drawable/pencilplus"
+        a:tag="key-6"
+        a:id="@+id/key_6"
+        a:contentDescription="@string/app_name"/>
+
+    <ImageButton
+        a:layout_width="48dp"
+        a:layout_height="48dp"
+        a:layout_alignParentEnd="true"
+        a:layout_alignParentBottom="true"
+        a:layout_marginEnd="50dp"
+        a:layout_marginBottom="0dp"
+        a:src="@drawable/pencilminus"
+        a:tag="key-7"
+        a:id="@+id/key_7"
+        a:contentDescription="@string/app_name"/>
+
+    <ImageButton
+        a:layout_width="48dp"
+        a:layout_height="48dp"
+        a:layout_alignParentEnd="true"
+        a:layout_alignParentBottom="true"
+        a:layout_marginEnd="0dp"
+        a:layout_marginBottom="0dp"
+        a:src="@drawable/handright"
+        a:tag="key-8"
+        a:id="@+id/key_8"
+        a:contentDescription="@string/app_name"/>
+
+
+    <ImageButton
+        a:id="@+id/settingst"
+        a:layout_width="48dp"
+        a:layout_height="48dp"
+        a:layout_alignParentStart="true"
+        a:layout_alignParentBottom="true"
+        a:layout_marginStart="150dp"
+        a:layout_marginBottom="0dp"
+        a:contentDescription="@string/app_name"
+        a:src="@drawable/settings"
+        a:onClick="set_click"/>
+
+    <com.shiyukine.touchtransporter.PaintGrid
+        a:minWidth="25dp"
+        a:minHeight="25dp"
+        a:id="@+id/tgraph"
+        a:layout_height="fill_parent"
+        a:layout_width="fill_parent"
+        a:background="@drawable/border"
+        a:layout_marginRight="12.5dp"
+        a:layout_marginLeft="12.5dp"
+        a:layout_marginTop="12.5dp"
+        a:layout_marginBottom="50dp"
+        />
+
+    <!---Modif grid size-->
+    <GridLayout
+        a:id="@+id/egraph1"
+        a:layout_width="25dp"
+        a:layout_height="25dp"
+        a:background="@drawable/circle"
+        a:minWidth="25dp"
+        a:minHeight="25dp"
+        a:layout_marginStart="35dp"
+        a:layout_marginTop="35dp"/>
+    <GridLayout
+        a:minWidth="25dp"
+        a:minHeight="25dp"
+        a:layout_width="25dp"
+        a:id="@+id/egraph2"
+        a:layout_height="25dp"
+        a:background="@drawable/circle"
+        a:layout_alignParentEnd="true"
+        a:layout_marginTop="35dp"
+        a:layout_marginEnd="35dp"/>
+    <GridLayout
+        a:minWidth="25dp"
+        a:minHeight="25dp"
+        a:layout_width="25dp"
+        a:id="@+id/egraph3"
+        a:layout_height="25dp"
+        a:background="@drawable/circle"
+        a:layout_alignParentEnd="true"
+        a:layout_alignParentBottom="true"
+        a:layout_marginEnd="35dp"
+        a:layout_marginBottom="72.5dp"/>
+
+    <GridLayout
+        a:id="@+id/egraph4"
+        a:layout_width="25dp"
+        a:layout_height="25dp"
+        a:background="@drawable/circle"
+        a:minWidth="25dp"
+        a:minHeight="25dp"
+        a:layout_alignParentBottom="true"
+        a:layout_marginStart="35dp"
+        a:layout_marginBottom="72.5dp"
+        a:contentDescription="@string/app_name"/>
+
+    <GridLayout
+        a:id="@+id/setg"
+        a:layout_width="200dp"
+        a:layout_height="48dp"
+        a:layout_alignParentBottom="true"
+        a:layout_marginStart="75dp"
+        a:layout_marginBottom="50dp"
+        a:visibility="gone"
+        a:background="#5C5C5C"
+        a:focusable="true"
+        a:clickable="true">
+
+        <TextView
+            a:text="Pressure intensifier :"
+            a:layout_gravity="center"/>
+        <SeekBar
+            a:layout_height="wrap_content"
+            a:layout_width="match_parent"
+            a:layout_row="1"
+            a:layout_column="0"
+            a:min="0"
+            style="@style/Widget.AppCompat.SeekBar.Discrete"
+            a:max="10"
+            a:tickMark="@drawable/tickmark"
+            a:id="@+id/pressbar"/>
+    </GridLayout>
+</RelativeLayout>

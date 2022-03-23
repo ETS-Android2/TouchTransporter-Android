@@ -1,0 +1,57 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.shiyukine.touchtransporter"
+4    android:versionCode="1"
+5    android:versionName="0.1.4" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="26"
+8-->E:\WorkSpaces\Android_Studio\TouchTransporter\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="29" />
+9-->E:\WorkSpaces\Android_Studio\TouchTransporter\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->E:\WorkSpaces\Android_Studio\TouchTransporter\app\src\main\AndroidManifest.xml:4:5-67
+11-->E:\WorkSpaces\Android_Studio\TouchTransporter\app\src\main\AndroidManifest.xml:4:22-64
+12
+13    <application
+13-->E:\WorkSpaces\Android_Studio\TouchTransporter\app\src\main\AndroidManifest.xml:5:5-20:19
+14        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+14-->[androidx.core:core:1.0.1] C:\Users\Shiyuki\.gradle\caches\transforms-2\files-2.1\032360533aed7f4773dde0d69318c0bd\core-1.0.1\AndroidManifest.xml:22:18-86
+15        android:debuggable="true"
+16        android:extractNativeLibs="false"
+17        android:icon="@mipmap/ico"
+17-->E:\WorkSpaces\Android_Studio\TouchTransporter\app\src\main\AndroidManifest.xml:6:9-35
+18        android:label="@string/app_name"
+18-->E:\WorkSpaces\Android_Studio\TouchTransporter\app\src\main\AndroidManifest.xml:7:9-41
+19        android:roundIcon="@mipmap/ico_round"
+19-->E:\WorkSpaces\Android_Studio\TouchTransporter\app\src\main\AndroidManifest.xml:8:9-46
+20        android:supportsRtl="true"
+20-->E:\WorkSpaces\Android_Studio\TouchTransporter\app\src\main\AndroidManifest.xml:9:9-35
+21        android:testOnly="true" >
+22        <activity
+22-->E:\WorkSpaces\Android_Studio\TouchTransporter\app\src\main\AndroidManifest.xml:10:9-12:50
+23            android:name="com.shiyukine.touchtransporter.Graph"
+23-->E:\WorkSpaces\Android_Studio\TouchTransporter\app\src\main\AndroidManifest.xml:11:13-34
+24            android:theme="@style/NoActionBar" />
+24-->E:\WorkSpaces\Android_Studio\TouchTransporter\app\src\main\AndroidManifest.xml:12:13-47
+25        <activity
+25-->E:\WorkSpaces\Android_Studio\TouchTransporter\app\src\main\AndroidManifest.xml:13:9-19:20
+26            android:name="com.shiyukine.touchtransporter.MainActivity"
+26-->E:\WorkSpaces\Android_Studio\TouchTransporter\app\src\main\AndroidManifest.xml:13:19-47
+27            android:theme="@style/AppTheme" >
+27-->E:\WorkSpaces\Android_Studio\TouchTransporter\app\src\main\AndroidManifest.xml:13:48-79
+28            <intent-filter>
+28-->E:\WorkSpaces\Android_Studio\TouchTransporter\app\src\main\AndroidManifest.xml:14:13-18:29
+29                <action android:name="android.intent.action.MAIN" />
+29-->E:\WorkSpaces\Android_Studio\TouchTransporter\app\src\main\AndroidManifest.xml:15:17-69
+29-->E:\WorkSpaces\Android_Studio\TouchTransporter\app\src\main\AndroidManifest.xml:15:25-66
+30
+31                <category android:name="android.intent.category.LAUNCHER" />
+31-->E:\WorkSpaces\Android_Studio\TouchTransporter\app\src\main\AndroidManifest.xml:17:17-77
+31-->E:\WorkSpaces\Android_Studio\TouchTransporter\app\src\main\AndroidManifest.xml:17:27-74
+32            </intent-filter>
+33        </activity>
+34    </application>
+35
+36</manifest>

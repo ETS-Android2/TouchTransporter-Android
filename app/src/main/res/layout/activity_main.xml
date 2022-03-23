@@ -1,0 +1,319 @@
+<RelativeLayout
+    xmlns:a="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    a:layout_width="fill_parent"
+    a:layout_height="fill_parent"
+    a:id="@+id/main"
+    tools:ignore="HardcodedText">
+
+    <ScrollView
+        a:layout_width="match_parent"
+        a:layout_height="match_parent"
+        a:layout_marginBottom="60dp">
+        <LinearLayout
+            a:layout_width="match_parent"
+            a:layout_height="wrap_content"
+            a:orientation="vertical"
+            a:padding="20dp">
+            <TextView
+                a:layout_width="wrap_content"
+                a:layout_height="wrap_content"
+                a:layout_marginStart="10dp"
+                a:layout_marginTop="10dp"
+                a:layout_marginEnd="10.0dp"
+                a:minWidth="25dp"
+                a:minHeight="25dp"
+                a:textStyle="bold"
+                a:textSize="16sp"
+                a:text="Hello and welcome to TouchTransporter!\nChange your settings, then as soon as you are done, click on the CONNECT button.\nClick back on your phone to return to this menu." />
+
+            <TextView
+                a:layout_width="wrap_content"
+                a:layout_height="wrap_content"
+                a:layout_marginStart="10dp"
+                a:textSize="20sp"
+                a:textColor="@color/colorPrimary"
+                a:layout_marginTop="10dp"
+                a:text="Placement and size of the interface" />
+
+            <ImageButton
+                a:id="@+id/settab"
+                a:layout_width="wrap_content"
+                a:layout_height="wrap_content"
+                a:layout_marginStart="10.0dp"
+                a:onClick="setT"
+                a:src="@drawable/settings"
+                a:contentDescription="Settings" />
+
+            <Button
+                a:text="Reset"
+                a:layout_width="wrap_content"
+                a:layout_height="wrap_content"
+                a:id="@+id/reset"
+                a:layout_marginStart="10dp"
+                a:onClick="reset_cl"/>
+
+            <TextView
+                a:layout_width="wrap_content"
+                a:layout_height="wrap_content"
+                a:layout_marginStart="10dp"
+                a:textSize="20sp"
+                a:textColor="@color/colorPrimary"
+                a:layout_marginTop="10dp"
+                a:text="Profiles" />
+
+            <Spinner
+                a:layout_width="wrap_content"
+                a:layout_height="wrap_content"
+                a:id="@+id/profiles"
+                a:layout_marginStart="10dp"/>
+
+            <LinearLayout
+                a:layout_width="wrap_content"
+                a:layout_height="wrap_content"
+                a:orientation="horizontal"
+                a:layout_marginStart="10dp">
+                <Button
+                    a:layout_width="36dp"
+                    a:layout_height="40dp"
+                    a:text="+"
+                    a:onClick="addProfile"/>
+                <Button
+                    a:layout_width="36dp"
+                    a:layout_height="40dp"
+                    a:text="-"
+                    a:onClick="removeProfile"/>
+            </LinearLayout>
+
+            <LinearLayout
+                a:layout_width="match_parent"
+                a:layout_height="match_parent"
+                a:visibility="gone"
+                a:orientation="horizontal"
+                a:id="@+id/newPro">
+
+                <EditText
+                    a:id="@+id/profiles_n"
+                    a:layout_width="339dp"
+                    a:layout_height="wrap_content"
+                    a:layout_weight="1"
+                    a:hint="Profile name"
+                    a:imeOptions="actionGo"
+                    a:lines="1"
+                    a:maxLines="1"
+                    a:singleLine="true" />
+
+                <ImageButton
+                    a:layout_width="36dp"
+                    a:layout_height="40dp"
+                    a:layout_gravity="center_vertical"
+                    a:src="@drawable/ic_baseline_close_24"
+                    a:onClick="backProfile"/>
+            </LinearLayout>
+
+            <TextView
+                a:layout_width="wrap_content"
+                a:layout_height="wrap_content"
+                a:layout_marginStart="10dp"
+                a:textSize="20sp"
+                a:textColor="@color/colorPrimary"
+                a:layout_marginTop="20dp"
+                a:text="Settings" />
+
+            <CheckBox
+                a:id="@+id/osu"
+                a:layout_width="wrap_content"
+                a:layout_height="wrap_content"
+                a:layout_marginStart="10dp"
+                a:onClick="osu_click"
+                a:text="osu! mode (does not display stylus functions + use mouse)" />
+
+            <CheckBox
+                a:id="@+id/automc"
+                a:layout_width="wrap_content"
+                a:layout_height="wrap_content"
+                a:onClick="mouse_click"
+                a:checked="true"
+                a:layout_marginStart="10dp"
+                a:text="Auto mouse click" />
+
+            <CheckBox
+                a:id="@+id/revert"
+                a:layout_width="wrap_content"
+                a:layout_height="wrap_content"
+                a:layout_marginStart="10dp"
+                a:onClick="revert_click"
+                a:text="Revert screen" />
+
+            <CheckBox
+                a:id="@+id/hist"
+                a:layout_width="wrap_content"
+                a:layout_height="wrap_content"
+                a:checked="true"
+                a:onClick="useHist"
+                a:layout_marginStart="10dp"
+                a:text="Be more precise" />
+
+            <TextView
+                a:layout_width="wrap_content"
+                a:layout_height="wrap_content"
+                a:layout_marginStart="10dp"
+                a:textSize="20sp"
+                a:textColor="@color/colorPrimary"
+                a:layout_marginTop="20dp"
+                a:text="Other"
+                a:onClick="showOrHideOther"/>
+
+            <TextView
+                a:layout_width="wrap_content"
+                a:layout_height="wrap_content"
+                a:layout_marginStart="10dp"
+                a:textSize="12sp"
+                a:textColor="#979797"
+                a:text="Click on &quot;Other&quot; to hide or reveal" />
+
+            <LinearLayout
+                a:layout_width="match_parent"
+                a:layout_height="wrap_content"
+                a:orientation="vertical"
+                a:layout_marginStart="10dp"
+                a:id="@+id/set_other"
+                a:visibility="gone">
+                <TextView
+                    a:layout_width="wrap_content"
+                    a:layout_height="wrap_content"
+                    a:text="Url to search for updates on the server below"
+                    a:layout_marginTop="10dp"/>
+
+                <LinearLayout
+                    a:layout_width="match_parent"
+                    a:layout_height="wrap_content"
+                    a:orientation="horizontal">
+
+                    <EditText
+                        a:layout_width="0dp"
+                        a:layout_height="wrap_content"
+                        a:text="aketsuky.com"
+                        a:id="@+id/serv_url"
+                        a:lines="1"
+                        a:maxLines="1"
+                        a:singleLine="true"
+                        a:imeOptions="actionGo"
+                        a:layout_weight="1"
+                        a:layout_marginEnd="10dp"/>
+
+                    <Button
+                        a:layout_width="wrap_content"
+                        a:layout_height="wrap_content"
+                        a:text="Save"
+                        a:onClick="chServ"/>
+                </LinearLayout>
+
+                <Button
+                    a:text="Update app"
+                    a:layout_width="wrap_content"
+                    a:layout_height="wrap_content"
+                    a:id="@+id/upd"
+                    a:onClick="upd_click"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        a:layout_width="wrap_content"
+        a:layout_height="wrap_content"
+        a:layout_alignParentBottom="true"
+        a:layout_marginBottom="10dp"
+        a:layout_marginStart="10dp"
+        a:text="version"
+        a:id="@+id/infos"/>
+
+    <Button
+        a:text="CONNECT"
+        a:layout_width="wrap_content"
+        a:layout_height="wrap_content"
+        a:id="@+id/log"
+        a:layout_margin="10dp"
+        a:layout_alignParentEnd="true"
+        a:layout_alignParentBottom="true"
+        a:onClick="Log"/>
+
+    <RelativeLayout
+        a:layout_width="match_parent"
+        a:layout_height="match_parent"
+        a:background="@color/cardview_dark_background"
+        a:id="@+id/conn"
+        a:visibility="gone">
+        <LinearLayout
+            a:layout_width="match_parent"
+            a:layout_height="match_parent"
+            a:orientation="vertical"
+            a:padding="20dp">
+
+            <RadioGroup
+                a:layout_width="wrap_content"
+                a:layout_height="wrap_content"
+                a:id="@+id/conn_options">
+                <RadioButton
+                    a:id="@+id/conn_usb"
+                    a:layout_width="wrap_content"
+                    a:layout_height="wrap_content"
+                    a:checked="true"
+                    a:onClick="conn_usb_click"
+                    a:text="Connect to a PC with USB" />
+
+                <RadioButton
+                    a:id="@+id/conn_all"
+                    a:layout_width="wrap_content"
+                    a:layout_height="wrap_content"
+                    a:onClick="conn_all_click"
+                    a:text="Connect to a PC with its IP" />
+            </RadioGroup>
+
+            <LinearLayout
+                a:layout_width="wrap_content"
+                a:layout_height="wrap_content"
+                a:orientation="vertical"
+                a:id="@+id/conn_all_p"
+                a:layout_marginStart="10dp"
+                a:visibility="gone">
+                <TextView
+                    a:layout_width="wrap_content"
+                    a:layout_height="wrap_content"
+                    a:text="Url of the server"/>
+                <EditText
+                    a:layout_width="200dp"
+                    a:layout_height="wrap_content"
+                    a:lines="1"
+                    a:maxLines="1"
+                    a:singleLine="true"
+                    a:imeOptions="actionGo"
+                    a:id="@+id/conn_all_t"
+                    a:text="127.0.0.1"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            a:layout_width="wrap_content"
+            a:layout_height="wrap_content"
+            a:text="Back"
+            a:onClick="back"
+            a:layout_alignParentBottom="true"
+            a:layout_alignParentEnd="true"
+            a:layout_marginEnd="100dp"
+            a:layout_marginBottom="10dp"
+            a:id="@+id/conn_back"/>
+
+        <FrameLayout
+            a:layout_width="36dp"
+            a:layout_height="36dp"
+            a:layout_alignParentBottom="true"
+            a:layout_alignParentEnd="true"
+            a:layout_marginEnd="35dp"
+            a:layout_marginBottom="16dp"
+            a:id="@+id/conn_load"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
