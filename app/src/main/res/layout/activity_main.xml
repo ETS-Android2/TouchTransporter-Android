@@ -194,7 +194,7 @@
                     <EditText
                         a:layout_width="0dp"
                         a:layout_height="wrap_content"
-                        a:text="aketsuky.com"
+                        a:text="aketsuky.eu"
                         a:id="@+id/serv_url"
                         a:lines="1"
                         a:maxLines="1"

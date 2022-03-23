@@ -159,7 +159,7 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
         });
-        ((EditText)findViewById(R.id.serv_url)).setText(settings.getString("Url_Server", "aketsuky.com"));
+        ((EditText)findViewById(R.id.serv_url)).setText(settings.getString("Url_Server", "aketsuky.eu"));
         searchUpd();
         RadioGroup rg = (RadioGroup)findViewById(R.id.conn_options);
         int connopt = settings.getInt("Conn_Options", 0);
@@ -306,7 +306,7 @@ public class MainActivity extends AppCompatActivity {
                 super.onPageFinished(view, url);
             }
         });
-        webView.loadUrl("http://" + settings.getString("Url_Server", "aketsuky.com") + "/dl/TouchTransporter/update_c.php");
+        webView.loadUrl("http://" + settings.getString("Url_Server", "aketsuky.eu") + "/dl/TouchTransporter/update_c.php");
     }
 
     public void updapp()
