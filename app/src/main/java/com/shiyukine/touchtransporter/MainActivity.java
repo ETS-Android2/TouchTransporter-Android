@@ -34,6 +34,7 @@ import androidx.swiperefreshlayout.widget.CircularProgressDrawable;
 
 import com.google.android.material.snackbar.Snackbar;
 
+import java.io.IOException;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
 
@@ -372,7 +373,20 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        if(findViewById(R.id.conn).getVisibility() == View.VISIBLE) findViewById(R.id.conn).setVisibility(View.GONE);
+        if(findViewById(R.id.conn).getVisibility() == View.VISIBLE)
+        {
+            findViewById(R.id.conn).setVisibility(View.GONE);
+            findViewById(R.id.conn).setVisibility(View.GONE);
+            cpd.stop();
+            findViewById(R.id.log).setVisibility(View.VISIBLE);
+            findViewById(R.id.conn_back).setVisibility(View.VISIBLE);
+            try {
+                if(Graph.isUsb) Graph.socket.close();
+                else Graph.socketU.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
         else super.onBackPressed();
     }
 }
